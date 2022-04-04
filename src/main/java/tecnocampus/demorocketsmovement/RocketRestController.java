@@ -23,7 +23,7 @@ public class RocketRestController {
     }
 
     @PutMapping("/rockets/{rocketId}/propellants/{propellantId}")
-    public Propellant updateMaxPower(@PathVariable Long propellantId, @RequestBody int maxPower) {
+    public Propellant updateMaxPower(@PathVariable Long propellantId, @RequestBody int maxPower, @PathVariable String rocketId) {
         Propellant propellant = propellantRepository.findById(propellantId).get();
         propellant.setMaxPower(maxPower);
         return propellantRepository.save(propellant);

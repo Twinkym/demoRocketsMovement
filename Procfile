@@ -1,0 +1,1 @@
+web: java $Java_opts -cp target/rocketsmovement.jar
